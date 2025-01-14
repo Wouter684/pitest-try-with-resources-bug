@@ -44,7 +44,7 @@ class MyClassTest {
             verify(threadLocalMock).get();
             verify(threadLocalMock).remove();
 
-            final AutoClosableResource mock = autoClosableResourceMock.constructed().getFirst();
+            final AutoClosableResource mock = autoClosableResourceMock.constructed().get(0);
             verify(mock).close();
         }
     }
@@ -60,7 +60,7 @@ class MyClassTest {
             verify(threadLocalMock).get();
             verify(threadLocalMock).remove();
 
-            final AutoClosableResource mock = autoClosableResourceMock.constructed().getFirst();
+            final AutoClosableResource mock = autoClosableResourceMock.constructed().get(0);
             verify(mock).close();
         }
     }
